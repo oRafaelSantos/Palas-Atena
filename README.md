@@ -1,2 +1,2 @@
 # Palas-Atena
-Enclopedia de filosofia. 
+Enciclopedia de filosofia. 
