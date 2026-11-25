@@ -1,0 +1,106 @@
+/* layout.css — estrutura da página: contêiner, cabeçalho, menu, rodapé e grades. */
+
+.container {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+}
+
+.site-main {
+  flex: 1;
+  padding-block: var(--space-5) var(--space-6);
+}
+
+/* Cabeçalho fixo e compacto para deixar o conteúdo aparecer cedo no celular. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-bar);
+  color: var(--color-bar-text);
+  border-bottom: 2px solid var(--color-bar-accent);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--header-height);
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+/* No celular o menu é um painel que abre sob o cabeçalho. */
+.site-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: var(--space-2) 1rem;
+  background: var(--color-bar);
+  border-bottom: 2px solid var(--color-bar-accent);
+}
+
+.site-nav.is-open { display: block; }
+
+.site-nav__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 48rem) {
+  .site-nav {
+    display: block;
+    position: static;
+    margin-left: auto;
+    padding: 0;
+    background: none;
+    border: 0;
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    gap: var(--space-4);
+  }
+
+  .site-header__actions { margin-left: 0; }
+  .menu-toggle { display: none; }
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: var(--space-2);
+  z-index: 30;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border-radius: var(--radius);
+}
+
+.skip-link:focus { left: var(--space-3); }
+
+.site-footer {
+  padding-block: var(--space-5);
+  background: var(--color-bar);
+  color: var(--color-bar-text);
+  border-top: 2px solid var(--color-bar-accent);
+  font-size: 0.95rem;
+}
+
+.site-footer a { color: var(--color-bar-accent); }
+.site-footer p { margin-bottom: var(--space-2); }
+
+.card-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr));
+}
