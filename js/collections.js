@@ -1,5 +1,5 @@
 /*
- * collections.js — registro das coleções de verbetes (pensadores, escolas...).
+ * collections.js — registro das coleções de verbetes (pensadores, escolas, correntes...).
  * Cada coleção diz como tratar seus itens: etiqueta, catálogo, endereço de cada
  * página e onde estão os dados. Os renderizadores usam este registro, então
  * uma nova categoria (correntes, obras) só precisa ser registrada aqui.
@@ -23,6 +23,13 @@
       catalogUrl: paths.schoolsCatalog(),
       itemUrl: paths.school,
       items: function () { return ns.data.escolas; }
+    },
+    corrente: {
+      tag: "Corrente filosófica",
+      catalogLabel: "Correntes filosóficas",
+      catalogUrl: paths.currentsCatalog(),
+      itemUrl: paths.current,
+      items: function () { return ns.data.correntes; }
     }
   };
 
