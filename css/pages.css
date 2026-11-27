@@ -1,0 +1,43 @@
+/* pages.css — estilos específicos de página: início, catálogo e artigo. */
+
+/* Cabeçalho de página (catálogo) e abertura da página inicial */
+.page-header { margin-bottom: var(--space-5); }
+.page-header p { max-width: 42rem; margin: var(--space-2) 0 0; }
+
+.hero { padding-block: var(--space-4) var(--space-5); border-bottom: 1px solid var(--color-border); }
+.hero__subtitle { margin: 0; color: var(--color-accent-text); font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; }
+.hero__tagline { margin: var(--space-2) 0 0; font-style: italic; }
+.hero__text { max-width: 42rem; margin: var(--space-3) 0 0; }
+
+.section { margin-top: var(--space-6); }
+.section__header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2); margin-bottom: var(--space-3); }
+.section__intro { max-width: 42rem; margin-bottom: var(--space-3); }
+
+/* Artigo: coluna de leitura estreita e seções numeradas (a numeração segue o padrão editorial de 8 seções) */
+.article { max-width: 46rem; counter-reset: secao; }
+.article__tag { color: var(--color-accent-text); font-size: 0.9rem; font-weight: 600; }
+.article__meta { margin: var(--space-2) 0 0; opacity: 0.85; }
+.article__lead { margin: var(--space-3) 0 0; font-size: 1.15rem; font-style: italic; }
+
+.article__section { margin-top: var(--space-5); }
+
+.article__section h2 {
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.article__section h2::before {
+  counter-increment: secao;
+  content: counter(secao) ". ";
+  color: var(--color-accent-text);
+}
+
+.definition-list { margin: 0; }
+.definition-list__item { margin-bottom: var(--space-3); padding-left: var(--space-3); border-left: 2px solid var(--color-border); }
+.definition-list dt { color: var(--color-heading); font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; }
+.definition-list dd { margin: 0; }
+
+.reference-list { padding-left: 1.25rem; font-size: 0.95rem; }
+.reference-list li { margin-bottom: var(--space-2); }
+.article__note { font-size: 0.95rem; }
