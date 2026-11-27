@@ -15,6 +15,8 @@
     catalog: function () { return root + "pages/pensadores.html"; },
     thinker: function (slug) { return root + "pages/filosofos/" + slug + ".html"; },
     schoolsCatalog: function () { return root + "pages/escolas.html"; },
-    school: function (slug) { return root + "pages/escolas/" + slug + ".html"; }
+    school: function (slug) { return root + "pages/escolas/" + slug + ".html"; },
+    currentsCatalog: function () { return root + "pages/correntes.html"; },
+    current: function (slug) { return root + "pages/correntes/" + slug + ".html"; }
   };
 })((window.PalasAtena = window.PalasAtena || {}));
