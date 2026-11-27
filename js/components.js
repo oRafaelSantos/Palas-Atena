@@ -11,7 +11,8 @@
   const NAV_ITEMS = [
     { id: "inicio", label: "Início", href: paths.home() },
     { id: "pensadores", label: "Pensadores", href: paths.catalog() },
-    { id: "escolas", label: "Escolas filosóficas", href: paths.schoolsCatalog() }
+    { id: "escolas", label: "Escolas filosóficas", href: paths.schoolsCatalog() },
+    { id: "correntes", label: "Correntes filosóficas", href: paths.currentsCatalog() }
   ];
 
   // Cada página indica seu tipo em <body data-page>; o artigo de um verbete
@@ -21,7 +22,9 @@
     pensadores: "pensadores",
     artigo: "pensadores",
     escolas: "escolas",
-    "artigo-escola": "escolas"
+    "artigo-escola": "escolas",
+    correntes: "correntes",
+    "artigo-corrente": "correntes"
   };
 
   // Mesma coruja de assets/icons/logo.svg (aqui inline, para herdar a cor do tema).
